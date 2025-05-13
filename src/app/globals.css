@@ -1,0 +1,666 @@
+/* Basic CSS reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+body {
+  color: #000;
+  background: #f5f5f5;
+}
+
+/* Custom utility for vertical text */
+.vertical-text {
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+  white-space: nowrap;
+}
+
+/* CSS utility classes */
+.min-h-screen { min-height: 100vh; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-1 { flex: 1; }
+.p-4 { padding: 1rem; }
+.bg-blue-600 { background-color: #2563eb; }
+.text-white { color: white; }
+.text-2xl { font-size: 1.5rem; }
+.font-bold { font-weight: 700; }
+.rounded-lg { border-radius: 0.5rem; }
+.mr-4 { margin-right: 1rem; }
+.w-1\/4 { width: 25%; }
+.w-3\/4 { width: 75%; }
+.bg-gray-100 { background-color: #f3f4f6; }
+.bg-white { background-color: white; }
+.shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+.text-xs { font-size: 0.75rem; }
+.text-gray-600 { color: #4b5563; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mt-8 { margin-top: 2rem; }
+.p-2 { padding: 0.5rem; }
+.items-center { align-items: center; }
+.h-full { height: 100%; }
+
+/* Other classes needed for the application */
+
+/* Custom CSS classes */
+.writing-vertical-lr {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+/* All the other CSS styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+body {
+  color: #000;
+  background: #f5f5f5;
+}
+
+/* Custom styles that extend Tailwind */
+@layer utilities {
+  .writing-vertical-lr {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+  }
+}
+
+/* Layout */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+/* Message styles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  height: 80vh;
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  max-width: 80%;
+}
+
+.user {
+  background-color: #e2f3ff;
+  align-self: flex-end;
+}
+
+.bot {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+}
+
+/* User question styles */
+.bg-purple-100 {
+  background-color: #f3e8ff;
+}
+
+.border-purple-300 {
+  border-color: #d8b4fe;
+}
+
+.text-purple-700 {
+  color: #7e22ce;
+}
+
+.text-purple-900 {
+  color: #581c87;
+}
+
+/* User question styles - blue theme */
+.bg-blue-100 {
+  background-color: #dbeafe;
+}
+
+.border-blue-300 {
+  border-color: #93c5fd;
+}
+
+.text-blue-700 {
+  color: #1d4ed8;
+}
+
+.text-blue-900 {
+  color: #1e3a8a;
+}
+
+.border-2 {
+  border-width: 2px;
+  border-style: solid;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+/* Typing cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+  font-weight: bold;
+}
+
+/* MathJax Styles */
+.math-content {
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.math-block {
+  margin: 0.5rem 0;
+  overflow-x: auto;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Fix for math rendering in user messages */
+.bg-blue-100 .math-content {
+  color: #000;
+}
+
+.resize-none {
+  resize: none;
+}
+
+/* Additional utility classes */
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.space-y-1 > * + * {
+  margin-top: 0.25rem;
+}
+
+.bg-yellow-100 {
+  background-color: #fef9c3;
+}
+
+.border-yellow-300 {
+  border-color: #fcd34d;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.text-yellow-800 {
+  color: #854d0e;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
+.list-decimal {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.text-yellow-700 {
+  color: #a16207;
+}
+
+/* Markdown styling */
+.markdown-content {
+  color: #111;
+  font-size: 1rem;
+}
+
+.markdown-content h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.75rem 0;
+}
+
+.markdown-content h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0.75rem 0;
+}
+
+.markdown-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.6rem 0;
+}
+
+.markdown-content p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.markdown-content ul, .markdown-content ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.markdown-content li {
+  margin: 0.25rem 0;
+}
+
+.markdown-content a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.markdown-content code {
+  background-color: #f3f4f6;
+  border-radius: 3px;
+  padding: 0.1rem 0.3rem;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.markdown-content .code-block {
+  background-color: #f3f4f6;
+  border-radius: 5px;
+  padding: 0.75rem;
+  margin: 0.75rem 0;
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-x: auto;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+}
+
+.markdown-content th, .markdown-content td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.markdown-content th {
+  background-color: #f9fafb;
+  font-weight: 600;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  margin: 0.75rem 0;
+  color: #4b5563;
+  font-style: italic;
+}
+
+/* Information Theory specific styles */
+.info-theory-term {
+  color: #2563eb;
+  border-bottom: 1px dotted #2563eb;
+  cursor: help;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.info-theory-term:hover {
+  background-color: #dbeafe;
+}
+
+.info-theory-reference {
+  padding: 0.25rem 0;
+}
+
+/* Formula reference styling */
+.formula-container {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+}
+
+.formula-name {
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 0.25rem;
+}
+
+.formula-description {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 0.25rem;
+}
+
+/* Category tabs */
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+/* Additional utility classes for new UI */
+.space-x-2 > * + * {
+  margin-left: 0.5rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.bg-blue-100 {
+  background-color: #dbeafe;
+}
+
+.hover\:bg-blue-200:hover {
+  background-color: #bfdbfe;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-blue-500 {
+  border-color: #3b82f6;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-blue-800 {
+  color: #1e40af;
+}
+
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
+
+.text-gray-800 {
+  color: #1f2937;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+}
+
+/* Grid for suggested questions */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+/* Suggested question buttons */
+.text-left {
+  text-align: left;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hover\:bg-blue-100:hover {
+  background-color: #dbeafe;
+}
+
+.bg-blue-50 {
+  background-color: #eff6ff;
+}
+
+.border-blue-200 {
+  border-color: #bfdbfe;
+}
+
+.text-blue-600 {
+  color: #2563eb;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-gray-200 {
+  border-color: #e5e7eb;
+}
+
+/* Custom scrollbar for browsers that support it */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+/* Enhanced formula display */
+.math-block {
+  margin: 0.5rem 0;
+  overflow-x: auto;
+  padding: 0.5rem 0;
+  background-color: #f9fafb;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Title and header styles */
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+/* Flex utilities */
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Padding and margin utilities */
+.p-3 {
+  padding: 0.75rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+/* New Chat button */
+.hover\:bg-blue-700:hover {
+  background-color: #1d4ed8;
+}
+
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Max height utilities */
+.max-h-48 {
+  max-height: 12rem;
+}
+
+/* Scrolling styles */
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+/* List styles */
+.space-y-1 > * + * {
+  margin-top: 0.25rem;
+}
+
+.space-y-2 > * + * {
+  margin-top: 0.5rem;
+}
+
+/* Link styles */
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+/* Additional styles for math rendering */
+.MathJax {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Make sure formulas are properly displayed on small screens */
+@media (max-width: 640px) {
+  .math-block {
+    font-size: 90%;
+    padding: 6px;
+  }
+  
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+} 
